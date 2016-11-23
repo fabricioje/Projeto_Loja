@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4A5C5C3-3C45-46C1-8081-F6C2A68AE4FA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>frmPrincipal</RootNamespace>
+    <AssemblyName>frmPrincipal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Fabricio\Desktop\programa\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E3C3017A9A103F5B1C3DF6F554C6A53D4EE67806</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Projeto_Loja_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autenticacao.cs" />
+    <Compile Include="Conexao.cs" />
+    <Compile Include="frmClienteAlterarFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClienteAlterarFinal.Designer.cs">
+      <DependentUpon>frmClienteAlterarFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClienteCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClienteCadastro.Designer.cs">
+      <DependentUpon>frmClienteCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClienteAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClienteAlterar.Designer.cs">
+      <DependentUpon>frmClienteAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClienteConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClienteConsultar.Designer.cs">
+      <DependentUpon>frmClienteConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendaConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaConsulta.Designer.cs">
+      <DependentUpon>frmVendaConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFornecedorAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFornecedorAlterar.Designer.cs">
+      <DependentUpon>frmFornecedorAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFornecedorAlterarFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFornecedorAlterarFinal.Designer.cs">
+      <DependentUpon>frmFornecedorAlterarFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFornecedorCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFornecedorCadastro.Designer.cs">
+      <DependentUpon>frmFornecedorCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFornecedorConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFornecedorConsultar.Designer.cs">
+      <DependentUpon>frmFornecedorConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProdutoAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdutoAlterar.Designer.cs">
+      <DependentUpon>frmProdutoAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProdutoAlterarFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdutoAlterarFinal.Designer.cs">
+      <DependentUpon>frmProdutoAlterarFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProdutoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdutoCadastro.Designer.cs">
+      <DependentUpon>frmProdutoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProdutoConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdutoConsultar.Designer.cs">
+      <DependentUpon>frmProdutoConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarioAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarioAlterar.Designer.cs">
+      <DependentUpon>frmUsuarioAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarioAlterarFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarioAlterarFinal.Designer.cs">
+      <DependentUpon>frmUsuarioAlterarFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarioCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarioCadastrar.Designer.cs">
+      <DependentUpon>frmUsuarioCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarioConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarioConsultar.Designer.cs">
+      <DependentUpon>frmUsuarioConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVenda.Designer.cs">
+      <DependentUpon>frmVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaCliente.Designer.cs">
+      <DependentUpon>frmVendaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaProduto.Designer.cs">
+      <DependentUpon>frmVendaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LojaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LojaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelatorioController.cs" />
+    <Compile Include="Verificacao.cs" />
+    <EmbeddedResource Include="frmClienteAlterarFinal.resx">
+      <DependentUpon>frmClienteAlterarFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClienteCadastro.resx">
+      <DependentUpon>frmClienteCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClienteAlterar.resx">
+      <DependentUpon>frmClienteAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClienteConsultar.resx">
+      <DependentUpon>frmClienteConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaConsulta.resx">
+      <DependentUpon>frmVendaConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFornecedorAlterar.resx">
+      <DependentUpon>frmFornecedorAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFornecedorAlterarFinal.resx">
+      <DependentUpon>frmFornecedorAlterarFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFornecedorCadastro.resx">
+      <DependentUpon>frmFornecedorCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFornecedorConsultar.resx">
+      <DependentUpon>frmFornecedorConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdutoAlterar.resx">
+      <DependentUpon>frmProdutoAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdutoAlterarFinal.resx">
+      <DependentUpon>frmProdutoAlterarFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdutoCadastro.resx">
+      <DependentUpon>frmProdutoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdutoConsultar.resx">
+      <DependentUpon>frmProdutoConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarioAlterar.resx">
+      <DependentUpon>frmUsuarioAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarioAlterarFinal.resx">
+      <DependentUpon>frmUsuarioAlterarFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarioCadastrar.resx">
+      <DependentUpon>frmUsuarioCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarioConsultar.resx">
+      <DependentUpon>frmUsuarioConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVenda.resx">
+      <DependentUpon>frmVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaCliente.resx">
+      <DependentUpon>frmVendaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaProduto.resx">
+      <DependentUpon>frmVendaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Relatorio.rdlc" />
+    <None Include="LojaDataSet.xsc">
+      <DependentUpon>LojaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LojaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LojaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LojaDataSet.xss">
+      <DependentUpon>LojaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\LojaDataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avançar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carrega_foto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exclui_foto2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localizar.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localizarRedimencionada.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\primeiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salvar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ultimo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guarda-roupas.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginRed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
