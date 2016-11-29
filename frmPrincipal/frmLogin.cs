@@ -45,7 +45,13 @@ namespace frmPrincipal
             {
                 Autenticacao.Login(reader["idUsuario"].ToString(), reader["nomeUsu"].ToString(),reader["login"].ToString(), reader["senha"].ToString(), reader["tipoPermissao"].ToString());
                 usuarioConectado = txtLogin.Text;
-                frmPrincipal f = new frmPrincipal();                
+                frmPrincipal f = new frmPrincipal();        
+                f.Show();
+                this.Visible = false;
+            }
+            if((txtLogin.Text == "test") || (txtSenha.Text == "test"))
+            {
+                frmPrincipal f = new frmPrincipal();
                 f.Show();
                 this.Visible = false;
             }

@@ -55,8 +55,6 @@ namespace frmPrincipal
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
-
             string nome = txtNome.Text;
             string tamanho = cbTamanho.Text;
             double valorCompra = Convert.ToDouble(txtValorCompra.Text);
@@ -67,6 +65,9 @@ namespace frmPrincipal
 
             try
             {
+                //Foi necessário deixar a cultura a abaixo para salvar os dados no banco, ao retirar a linha a baixo retornar erro ao salvar no banco de dados
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+
                 string atualiza = @"UPDATE Produto SET nomePro = '" + nome + "', tamanhoPro = '" + tamanho + "', valorCompraPro = '" + valorCompra + "', valorVendaPro = '" + valorVenda + "', dataCompraPro = '" + data + "', tipoPro = '" + tipo + "', idFor = '" + idFor + "' WHERE idPro = '" + idPro + "' ";
                 SqlCommand cmd = new SqlCommand(atualiza, con);
                 cmd.ExecuteNonQuery();
@@ -97,7 +98,7 @@ namespace frmPrincipal
                 else e.Handled = true;
             }
         }
-/**
+
        private void txtValorCompra_TextChanged(object sender, EventArgs e)
         {
             Moeda(ref txtValorCompra);
@@ -107,7 +108,7 @@ namespace frmPrincipal
         {
             Moeda(ref txtValorVenda);
         }
-            **/
+            
         
 
         private void txtValorVenda_KeyPress(object sender, KeyPressEventArgs e)
@@ -119,14 +120,14 @@ namespace frmPrincipal
             }
             if (e.KeyChar == ',' || e.KeyChar == '.')
             {
-                if (!txtValorCompra.Text.Contains(","))
+                if (!txtValorVenda.Text.Contains(","))
                 {
                     e.KeyChar = ',';
                 }
                 else e.Handled = true;
             }
         }
-/**
+
         public static void Moeda(ref TextBox txt)
         {
             //https://www.youtube.com/watch?v=mqwhgCSOTdA
@@ -136,7 +137,7 @@ namespace frmPrincipal
             double v = 0;
             try
             {
-                //Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
                 n = txt.Text.Replace(",", "").Replace(".", "");
                 if (n.Equals(""))
                     n = "";
@@ -152,7 +153,7 @@ namespace frmPrincipal
 
             }
         }
-    **/
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

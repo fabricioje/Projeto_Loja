@@ -12,9 +12,9 @@ namespace frmPrincipal
         Conexao banco = new Conexao();
 
         string nomeCliente, nomeMae, cpf, dataNascimento, cidade, rua, bairro, referencia, telefone, celular;
-        string nomeProduto, tamanho, dataCompra, tipo, dataVencimento=null, formaPagamento;
-        int idCliente, idProduto, idVenda, numero, fornecedor, quantidadeParcela, quantidadeProduto;
-        double limiteCredito, valorCompra, valorVenda, valorSomaProduto, totalDaVenda, totalDaVendaComDesconto, totalDaVendaFinal, desconto, valorPago;
+        string nomeProduto, tamanho, dataCompra, tipo, dataVencimento=null, formaPagamento,coluna2;
+        int idCliente, idProduto, idVenda, numero, fornecedor, quantidadeParcela, quantidadeProduto, coluna1, coluna3;
+        double limiteCredito, valorCompra, valorVenda, valorSomaProduto, totalDaVenda, totalDaVendaComDesconto, totalDaVendaFinal, desconto, valorPago, coluna4, coluna5;
 
         public frmVenda()
         {
@@ -76,7 +76,7 @@ namespace frmPrincipal
 
         private void txtDesconto_TextChanged(object sender, EventArgs e)
         {
-            //Moeda(ref txtDesconto);
+            Moeda(ref txtDesconto);
 
 
             //faz o calculo do desconto em tempo real
@@ -94,7 +94,7 @@ namespace frmPrincipal
                 txtValorTotal.Text = Convert.ToString(totalDaVenda);
                 txtDesconto.Text = "";
                 totalDaVendaComDesconto = 0;
-                MessageBox.Show("O valor do desconto não pode ser menor ou igual ao valor da compra\n  ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("O valor do desconto não pode ser maior ou igual ao valor da compra\n  ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
@@ -102,8 +102,6 @@ namespace frmPrincipal
         private void txtValorPago_TextChanged(object sender, EventArgs e)
         {
             Moeda(ref txtValorPago);
-
-            //var valorFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", txtValorPago.Text);
 
         }
 
@@ -241,7 +239,7 @@ namespace frmPrincipal
             try
             {
                 //salvando os dados no banco de dados *** o SELECT no final da instrução é para fazer a leitura dos IDs da tabela
-                string query = @"INSERT INTO Venda (idCli, idUsu, idPro, dataVenda, dataVencimento, formaPagVen, valorTotal, qtdParcelas) Values ('" + idCliente + "','" + Autenticacao.getID() + "','" + idProduto + "','" + dataDaVenda + "','" + dataVencimento + "','" + formaPagamento + "','" + totalDaVendaFinal + "','" + quantidadeParcela + "'); SELECT @@IDENTITY AS ultimo FROM Venda";
+                string query = @"INSERT INTO Venda (idCli, idUsu, idPro, dataVenda, dataVencimento, formaPagVen, valorTotal, qtdParcelas) Values ('" + idCliente + "','" + Autenticacao.getID() + "','" + idProduto + "','" + dataDaVenda + "','" + dataVencimento + "','" + formaPagamento + "','" + converteValorVenda() + "','" + quantidadeParcela + "'); SELECT @@IDENTITY AS ultimo FROM Venda";
 
                 //execultando o comando SQL
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -271,24 +269,31 @@ namespace frmPrincipal
                 //salva dos dados do DataGridView, salva cada coluna em uma variavel e passa por toda a lista salvando cada linha
                 for (int i = 0; i <= dataConsulta.Rows.Count - 1; i++)
                 {
-                    int coluna1 = Convert.ToInt32(dataConsulta.Rows[i].Cells[0].Value); //código do produto
-                    string coluna2 = Convert.ToString(dataConsulta.Rows[i].Cells[1].Value); //nome do produto
-                    int coluna3 = Convert.ToInt32(dataConsulta.Rows[i].Cells[2].Value); //quantidade do produto
-                    double coluna4 = Convert.ToDouble(dataConsulta.Rows[i].Cells[3].Value); //valor do produto
-                    double coluna5 = Convert.ToDouble(dataConsulta.Rows[i].Cells[4].Value); //valor total da compra
+                    //Foi necessário muldar a cultura pois ao pegar os dados do datagrid os mesmos estavam vindo sem a virgula
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
 
-                    string query2 = @"INSERT INTO Item_Venda(idVen, idPro, quantidade, valorUnidade, valorTotal) VALUES ('" + ultimoCodigo + "','" + coluna1 + "','" + coluna3 + "','" + coluna4 + "','" + coluna5 + "')";
+                    coluna1 = Convert.ToInt32(dataConsulta.Rows[i].Cells[0].Value); //código do produto
+                    coluna2 = Convert.ToString(dataConsulta.Rows[i].Cells[1].Value); //nome do produto
+                    coluna3 = Convert.ToInt32(dataConsulta.Rows[i].Cells[2].Value); //quantidade do produto
+                    coluna4 = Convert.ToDouble(dataConsulta.Rows[i].Cells[3].Value); //valor do produto
+                    coluna5 = Convert.ToDouble(dataConsulta.Rows[i].Cells[4].Value); //valor total da compra
+
+                    string query2 = @"INSERT INTO Item_Venda(idVen, idPro, quantidade, valorUnidade, valorTotal) VALUES ('" + ultimoCodigo + "','" + coluna1 + "','" + coluna3 + "','" + converteItemValorProduto() + "','" + converteItemValorTotalItem() + "')";
                     SqlCommand cmd2 = new SqlCommand(query2, con);
                     cmd2.ExecuteNonQuery();         
                 }
 
                 MessageBox.Show("Venda realizada com sucesso!!!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                this.Dispose();
 
                 //verificar se tem troco no valor pago
-                if(valorPago > totalDaVendaFinal)
+                if (valorPago > totalDaVendaFinal)
                 {
                     double troco = valorPago - totalDaVendaFinal;
                     MessageBox.Show("O valor do troco é: R$" + troco, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                    this.Dispose();
                 }
             }
             catch(Exception ex2)
@@ -336,7 +341,7 @@ namespace frmPrincipal
             txtCodProduto.Text = Convert.ToString(idProduto);
             txtValorProduto.Text = Convert.ToString(valorVenda);
 
-            //habilita o botao para incluir produto na lita
+            //habilita o botao para incluir produto na lista
             btnIncluir.Enabled = true;
 
         }
@@ -351,7 +356,7 @@ namespace frmPrincipal
             try
             {
                 //muda para o tipo de cultura
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
 
                 n = txt.Text.Replace(",", "").Replace(".", "");
                 if (n.Equals(""))
@@ -369,12 +374,42 @@ namespace frmPrincipal
             }
         }
     
-
+        //Método para mudar a cultura da data para ser salva no banco de dados
         public string data()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
             DateTime getDate = DateTime.Now;
             return getDate.ToString();
+        }
+        
+        //Método para mudar a cultura da variável tipo double para ser salva no banco de dados
+        public double converteValorVenda()
+        {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            double valorConvertido;
+            double getvalor = totalDaVendaFinal;
+            valorConvertido = getvalor;
+            return valorConvertido;
+        }
+
+        //Método para mudar a cultura da variável tipo double para ser salva no banco de dados
+        public double converteItemValorProduto()
+        {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            double valorConvertido;
+            double getvalor = totalDaVendaFinal;
+            valorConvertido = getvalor;
+            return valorConvertido;
+        }
+
+        //Método para mudar a cultura da variável tipo double para ser salva no banco de dados
+        public double converteItemValorTotalItem()
+        {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            double valorConvertido;
+            double getvalor = totalDaVendaFinal;
+            valorConvertido = getvalor;
+            return valorConvertido;
         }
 
     }
