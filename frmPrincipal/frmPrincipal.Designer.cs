@@ -50,11 +50,11 @@
             this.consultarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.recebimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblUsuarioConectado = new System.Windows.Forms.Label();
             this.vendasEmAbertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasAPrazoPagasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasRealizadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblUsuarioConectado = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -239,23 +239,6 @@
             this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.relatórioToolStripMenuItem.Text = "Relatório";
             // 
-            // manutençãoToolStripMenuItem
-            // 
-            this.manutençãoToolStripMenuItem.Name = "manutençãoToolStripMenuItem";
-            this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.manutençãoToolStripMenuItem.Text = "Manutenção";
-            // 
-            // lblUsuarioConectado
-            // 
-            this.lblUsuarioConectado.AutoSize = true;
-            this.lblUsuarioConectado.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblUsuarioConectado.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioConectado.Location = new System.Drawing.Point(574, 24);
-            this.lblUsuarioConectado.Name = "lblUsuarioConectado";
-            this.lblUsuarioConectado.Size = new System.Drawing.Size(210, 73);
-            this.lblUsuarioConectado.TabIndex = 1;
-            this.lblUsuarioConectado.Text = "label1";
-            // 
             // vendasEmAbertoToolStripMenuItem
             // 
             this.vendasEmAbertoToolStripMenuItem.Name = "vendasEmAbertoToolStripMenuItem";
@@ -273,6 +256,23 @@
             this.vendasRealizadasToolStripMenuItem.Name = "vendasRealizadasToolStripMenuItem";
             this.vendasRealizadasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.vendasRealizadasToolStripMenuItem.Text = "Vendas realizadas";
+            // 
+            // manutençãoToolStripMenuItem
+            // 
+            this.manutençãoToolStripMenuItem.Name = "manutençãoToolStripMenuItem";
+            this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.manutençãoToolStripMenuItem.Text = "Manutenção";
+            // 
+            // lblUsuarioConectado
+            // 
+            this.lblUsuarioConectado.AutoSize = true;
+            this.lblUsuarioConectado.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblUsuarioConectado.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioConectado.Location = new System.Drawing.Point(574, 24);
+            this.lblUsuarioConectado.Name = "lblUsuarioConectado";
+            this.lblUsuarioConectado.Size = new System.Drawing.Size(210, 73);
+            this.lblUsuarioConectado.TabIndex = 1;
+            this.lblUsuarioConectado.Text = "label1";
             // 
             // frmPrincipal
             // 
