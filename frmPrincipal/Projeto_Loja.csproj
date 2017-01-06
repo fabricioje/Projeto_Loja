@@ -211,6 +211,18 @@
     <Compile Include="frmVendaProduto.Designer.cs">
       <DependentUpon>frmVendaProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVendaRecebimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaRecebimento.Designer.cs">
+      <DependentUpon>frmVendaRecebimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendasAbertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendasAbertas.Designer.cs">
+      <DependentUpon>frmVendasAbertas.cs</DependentUpon>
+    </Compile>
     <Compile Include="LojaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -220,6 +232,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelatorioController.cs" />
     <Compile Include="Verificacao.cs" />
+    <Compile Include="VerificaParcela.cs" />
     <EmbeddedResource Include="frmClienteAlterarFinal.resx">
       <DependentUpon>frmClienteAlterarFinal.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +299,12 @@
     <EmbeddedResource Include="frmVendaProduto.resx">
       <DependentUpon>frmVendaProduto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaRecebimento.resx">
+      <DependentUpon>frmVendaRecebimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendasAbertas.resx">
+      <DependentUpon>frmVendasAbertas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -297,6 +316,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Relatorio.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="LojaDataSet.xsc">
       <DependentUpon>LojaDataSet.xsd</DependentUpon>
     </None>

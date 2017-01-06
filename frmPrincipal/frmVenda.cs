@@ -12,8 +12,25 @@ namespace frmPrincipal
         Conexao banco = new Conexao();
 
         string nomeCliente, nomeMae, cpf, dataNascimento, cidade, rua, bairro, referencia, telefone, celular;
-        string nomeProduto, tamanho, dataCompra, tipo, dataVencimento=null, formaPagamento,coluna2;
-        int idCliente, idProduto, idVenda, numero, fornecedor, quantidadeParcela, quantidadeProduto, coluna1, coluna3;
+        string nomeProduto, tamanho, dataCompra, tipo, dataVencimento=null, formaPagamento,coluna2, situacao = "ABERTA";
+        int idCliente, idProduto, idVenda, numero, fornecedor, quantidadeParcela, quantidadeProduto, coluna1, coluna3, parcelasPagas;
+
+
+        private void cbFormaPagamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbFormaPagamento.Text == "")
+            {
+                txtValorPago.Enabled = false;
+                txtDesconto.Enabled = false;
+            }
+            else
+            {
+                txtValorPago.Enabled = true;
+                txtDesconto.Enabled = true;
+
+            }
+        }
+
         double limiteCredito, valorCompra, valorVenda, valorSomaProduto, totalDaVenda, totalDaVendaComDesconto, totalDaVendaFinal, desconto, valorPago, coluna4, coluna5;
 
         public frmVenda()
@@ -45,7 +62,7 @@ namespace frmPrincipal
             valorPago = Convert.ToDouble(txtValorPago.Text.Replace("R$",""));            
             double valorAtualizado = Convert.ToDouble(txtValorTotal.Text);
 
-            if (valorPago < valorAtualizado)
+            if (valorPago < valorAtualizado && cbFormaPagamento.Text =="A VISTA")
             {
                 txtValorPago.Text = "";
                 txtValorPago.Focus();
@@ -238,8 +255,18 @@ namespace frmPrincipal
 
             try
             {
+                if(cbFormaPagamento.Text == "A VISTA")
+                {
+                    situacao = "FECHADA";
+                    parcelasPagas = 0;
+                }
+                else
+                {
+                    parcelasPagas = quantidadeParcela;
+                }
+
                 //salvando os dados no banco de dados *** o SELECT no final da instrução é para fazer a leitura dos IDs da tabela
-                string query = @"INSERT INTO Venda (idCli, idUsu, idPro, dataVenda, dataVencimento, formaPagVen, valorTotal, qtdParcelas) Values ('" + idCliente + "','" + Autenticacao.getID() + "','" + idProduto + "','" + dataDaVenda + "','" + dataVencimento + "','" + formaPagamento + "','" + converteValorVenda() + "','" + quantidadeParcela + "'); SELECT @@IDENTITY AS ultimo FROM Venda";
+                string query = @"INSERT INTO Venda (idCli, idUsu, idPro, dataVenda, dataVencimento, formaPagVen, valorTotal, qtdParcelas, parcelasRestantes, situacaoVenda) Values ('" + idCliente + "','" + Autenticacao.getID() + "','" + idProduto + "','" + dataDaVenda + "','" + dataVencimento + "','" + formaPagamento + "','" + converteValorVenda() + "','" + quantidadeParcela + "','" + parcelasPagas + "','" + situacao + "'); SELECT @@IDENTITY AS ultimo FROM Venda";
 
                 //execultando o comando SQL
                 SqlCommand cmd = new SqlCommand(query, con);

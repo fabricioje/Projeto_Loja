@@ -49,12 +49,6 @@ namespace frmPrincipal
                 f.Show();
                 this.Visible = false;
             }
-            if((txtLogin.Text == "test") || (txtSenha.Text == "test"))
-            {
-                frmPrincipal f = new frmPrincipal();
-                f.Show();
-                this.Visible = false;
-            }
             else
             {
                 MessageBox.Show("Erro: Usuário e/ou senha não encontrados", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);

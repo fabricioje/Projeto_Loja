@@ -115,5 +115,12 @@ namespace frmPrincipal
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void recebimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVendaRecebimento f = new frmVendaRecebimento();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }

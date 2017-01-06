@@ -27,5 +27,22 @@ namespace frmPrincipal
             return ds.Consulta;
         }
 
+        public static LojaDataSet.RelatorioDataTable GetRelatorio(string nome)
+        {
+            RelatorioTableAdapter da = new RelatorioTableAdapter();
+
+            LojaDataSet ds = new LojaDataSet();
+
+            Conexao c = new Conexao();
+
+            using(SqlConnection conn= c.abrir_conexao())
+            {
+                da.Connection = conn;
+                da.Fill(ds.Relatorio, nome);
+            }
+
+            return ds.Relatorio;
+        }
+
     }
 }
