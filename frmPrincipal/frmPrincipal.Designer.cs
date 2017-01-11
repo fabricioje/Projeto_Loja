@@ -244,6 +244,7 @@
             this.vendasEmAbertoToolStripMenuItem.Name = "vendasEmAbertoToolStripMenuItem";
             this.vendasEmAbertoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.vendasEmAbertoToolStripMenuItem.Text = "Vendas em aberto";
+            this.vendasEmAbertoToolStripMenuItem.Click += new System.EventHandler(this.vendasEmAbertoToolStripMenuItem_Click);
             // 
             // vendasAPrazoPagasToolStripMenuItem
             // 

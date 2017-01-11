@@ -21,15 +21,19 @@ namespace frmPrincipal
 
         int id, quantidadeparcelas, parcelasRestantes;
         double valorTotal, valorParcela;
-        string nome, cpf, dataNascimento, dataVencimento, situacao;
+        string nome, cpf, dataNascimento, situacao;
+        DateTime dataVencimento;
 
         private void btnReceber_Click(object sender, EventArgs e)
         {
+            DateTime dataVencimentoAtualizada = ConverteData(dataVencimento);
+            
+
             VerificaParcela v = new VerificaParcela();
             int parcelaAtualizada = v.BaixaParcela(parcelasRestantes);
             string situacaoAtualizada = v.VerificaSituacao(parcelaAtualizada);
 
-            string query = @"UPDATE Venda SET parcelasRestantes = '" + parcelaAtualizada + "', situacaoVenda = '" + situacaoAtualizada + "' WHERE idVen = '" + id + "'";
+            string query = @"UPDATE Venda SET dataVencimento = '"+ dataVencimentoAtualizada +"', parcelasRestantes = '" + parcelaAtualizada + "', situacaoVenda = '" + situacaoAtualizada + "' WHERE idVen = '" + id + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             con.Close();
@@ -130,7 +134,7 @@ namespace frmPrincipal
                 nome = Convert.ToString(dataConsulta.Rows[e.RowIndex].Cells[1].Value);
                 cpf = Convert.ToString(dataConsulta.Rows[e.RowIndex].Cells[2].Value);
                 dataNascimento = Convert.ToString(dataConsulta.Rows[e.RowIndex].Cells[3].Value);
-                dataVencimento = Convert.ToString(dataConsulta.Rows[e.RowIndex].Cells[4].Value);
+                dataVencimento = Convert.ToDateTime(dataConsulta.Rows[e.RowIndex].Cells[4].Value);
                 valorTotal = Convert.ToDouble(dataConsulta.Rows[e.RowIndex].Cells[5].Value);
                 quantidadeparcelas = Convert.ToInt32(dataConsulta.Rows[e.RowIndex].Cells[6].Value);
                 parcelasRestantes = Convert.ToInt32(dataConsulta.Rows[e.RowIndex].Cells[7].Value);
@@ -148,6 +152,14 @@ namespace frmPrincipal
             }
             
         }
+        
+        public DateTime ConverteData(DateTime data)
+        {
+            //acrescenta mais um mes
+            data = data.AddMonths(1);
+            return data;
+        }
+    
 
         public static void Moeda(ref TextBox txt)
         {

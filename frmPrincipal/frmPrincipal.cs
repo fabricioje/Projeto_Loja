@@ -122,5 +122,12 @@ namespace frmPrincipal
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void vendasEmAbertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVendasAbertas f = new frmVendasAbertas();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }

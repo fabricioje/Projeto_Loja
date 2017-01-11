@@ -103,6 +103,18 @@
     <Compile Include="frmClienteConsultar.Designer.cs">
       <DependentUpon>frmClienteConsultar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVendaAbertaComPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaAbertaComPeriodo.Designer.cs">
+      <DependentUpon>frmVendaAbertaComPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendaAbertaSemPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaAbertaSemPeriodo.Designer.cs">
+      <DependentUpon>frmVendaAbertaSemPeriodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVendaConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +257,12 @@
     <EmbeddedResource Include="frmClienteConsultar.resx">
       <DependentUpon>frmClienteConsultar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaAbertaComPeriodo.resx">
+      <DependentUpon>frmVendaAbertaComPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaAbertaSemPeriodo.resx">
+      <DependentUpon>frmVendaAbertaSemPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVendaConsulta.resx">
       <DependentUpon>frmVendaConsulta.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +335,8 @@
     </Compile>
     <EmbeddedResource Include="Relatorio.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="repVendaAbertaComPeriodo.rdlc" />
+    <EmbeddedResource Include="repVendasAbertas.rdlc" />
     <None Include="LojaDataSet.xsc">
       <DependentUpon>LojaDataSet.xsd</DependentUpon>
     </None>
