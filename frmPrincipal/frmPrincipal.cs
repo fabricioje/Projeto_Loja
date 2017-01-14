@@ -125,7 +125,14 @@ namespace frmPrincipal
 
         private void vendasEmAbertoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVendasAbertas f = new frmVendasAbertas();
+            frmVendaAberta f = new frmVendaAberta();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void vendasAPrazoPagasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVendaFechada f = new frmVendaFechada();
             f.ShowDialog();
             f.Dispose();
         }

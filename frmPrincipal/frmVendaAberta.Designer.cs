@@ -1,6 +1,6 @@
 ﻿namespace frmPrincipal
 {
-    partial class frmVendasAbertas
+    partial class frmVendaAberta
     {
         /// <summary>
         /// Required designer variable.

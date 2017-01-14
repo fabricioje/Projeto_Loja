@@ -1,6 +1,6 @@
 ﻿namespace frmPrincipal
 {
-    partial class frmVendaAbertaComPeriodo
+    partial class frmVendaFechadaComPeriodo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.Venda_Aberta_Com_PeriodoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.LojaDataSet = new LojaDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.Venda_Aberta_Com_PeriodoTableAdapter = new LojaDataSetTableAdapters.Venda_Aberta_Com_PeriodoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.Venda_Aberta_Com_PeriodoBindingSource)).BeginInit();
+            this.LojaDataSet = new LojaDataSet();
+            this.Venda_Fechada_Com_PeriodoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Venda_Fechada_Com_PeriodoTableAdapter = new LojaDataSetTableAdapters.Venda_Fechada_Com_PeriodoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.LojaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Venda_Fechada_Com_PeriodoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // Venda_Aberta_Com_PeriodoBindingSource
+            // reportViewer1
             // 
-            this.Venda_Aberta_Com_PeriodoBindingSource.DataMember = "Venda_Aberta_Com_Periodo";
-            this.Venda_Aberta_Com_PeriodoBindingSource.DataSource = this.LojaDataSet;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "RelatorioVendaFechadaComPeriodo";
+            reportDataSource1.Value = this.Venda_Fechada_Com_PeriodoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "frmPrincipal.repVendaFechadaComPeriodo.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(784, 561);
+            this.reportViewer1.TabIndex = 0;
             // 
             // LojaDataSet
             // 
@@ -49,34 +56,27 @@
             this.LojaDataSet.EnforceConstraints = false;
             this.LojaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // Venda_Fechada_Com_PeriodoBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSetVendaComPeriodo";
-            reportDataSource1.Value = this.Venda_Aberta_Com_PeriodoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "frmPrincipal.repVendaAbertaComPeriodo.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(789, 561);
-            this.reportViewer1.TabIndex = 0;
+            this.Venda_Fechada_Com_PeriodoBindingSource.DataMember = "Venda_Fechada_Com_Periodo";
+            this.Venda_Fechada_Com_PeriodoBindingSource.DataSource = this.LojaDataSet;
             // 
-            // Venda_Aberta_Com_PeriodoTableAdapter
+            // Venda_Fechada_Com_PeriodoTableAdapter
             // 
-            this.Venda_Aberta_Com_PeriodoTableAdapter.ClearBeforeFill = true;
+            this.Venda_Fechada_Com_PeriodoTableAdapter.ClearBeforeFill = true;
             // 
-            // frmVendaAbertaComPeriodo
+            // frmVendaFechadaComPeriodo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 561);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmVendaAbertaComPeriodo";
+            this.Name = "frmVendaFechadaComPeriodo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vendas Abertas com Período";
-            this.Load += new System.EventHandler(this.frmVendaAbertaComPeriodo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Venda_Aberta_Com_PeriodoBindingSource)).EndInit();
+            this.Text = "Vendas Fechadas";
+            this.Load += new System.EventHandler(this.frmVendaFechadaComPeriodo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LojaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Venda_Fechada_Com_PeriodoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -84,8 +84,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource Venda_Aberta_Com_PeriodoBindingSource;
+        private System.Windows.Forms.BindingSource Venda_Fechada_Com_PeriodoBindingSource;
         private LojaDataSet LojaDataSet;
-        private LojaDataSetTableAdapters.Venda_Aberta_Com_PeriodoTableAdapter Venda_Aberta_Com_PeriodoTableAdapter;
+        private LojaDataSetTableAdapters.Venda_Fechada_Com_PeriodoTableAdapter Venda_Fechada_Com_PeriodoTableAdapter;
     }
 }

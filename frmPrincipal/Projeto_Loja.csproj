@@ -217,6 +217,24 @@
     <Compile Include="frmVendaCliente.Designer.cs">
       <DependentUpon>frmVendaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVendaFechada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaFechada.Designer.cs">
+      <DependentUpon>frmVendaFechada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendaFechadaComPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaFechadaComPeriodo.Designer.cs">
+      <DependentUpon>frmVendaFechadaComPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendaFechadaSemPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaFechadaSemPeriodo.Designer.cs">
+      <DependentUpon>frmVendaFechadaSemPeriodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVendaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,11 +247,11 @@
     <Compile Include="frmVendaRecebimento.Designer.cs">
       <DependentUpon>frmVendaRecebimento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVendasAbertas.cs">
+    <Compile Include="frmVendaAberta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVendasAbertas.Designer.cs">
-      <DependentUpon>frmVendasAbertas.cs</DependentUpon>
+    <Compile Include="frmVendaAberta.Designer.cs">
+      <DependentUpon>frmVendaAberta.cs</DependentUpon>
     </Compile>
     <Compile Include="LojaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -314,14 +332,23 @@
     <EmbeddedResource Include="frmVendaCliente.resx">
       <DependentUpon>frmVendaCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaFechada.resx">
+      <DependentUpon>frmVendaFechada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaFechadaComPeriodo.resx">
+      <DependentUpon>frmVendaFechadaComPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaFechadaSemPeriodo.resx">
+      <DependentUpon>frmVendaFechadaSemPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVendaProduto.resx">
       <DependentUpon>frmVendaProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVendaRecebimento.resx">
       <DependentUpon>frmVendaRecebimento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVendasAbertas.resx">
-      <DependentUpon>frmVendasAbertas.cs</DependentUpon>
+    <EmbeddedResource Include="frmVendaAberta.resx">
+      <DependentUpon>frmVendaAberta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -336,6 +363,8 @@
     <EmbeddedResource Include="Relatorio.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="repVendaAbertaComPeriodo.rdlc" />
+    <EmbeddedResource Include="repVendaFechadaComPeriodo.rdlc" />
+    <EmbeddedResource Include="repVendaFechadaSemPeriodo.rdlc" />
     <EmbeddedResource Include="repVendasAbertas.rdlc" />
     <None Include="LojaDataSet.xsc">
       <DependentUpon>LojaDataSet.xsd</DependentUpon>

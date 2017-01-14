@@ -242,20 +242,21 @@
             // vendasEmAbertoToolStripMenuItem
             // 
             this.vendasEmAbertoToolStripMenuItem.Name = "vendasEmAbertoToolStripMenuItem";
-            this.vendasEmAbertoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.vendasEmAbertoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.vendasEmAbertoToolStripMenuItem.Text = "Vendas em aberto";
             this.vendasEmAbertoToolStripMenuItem.Click += new System.EventHandler(this.vendasEmAbertoToolStripMenuItem_Click);
             // 
             // vendasAPrazoPagasToolStripMenuItem
             // 
             this.vendasAPrazoPagasToolStripMenuItem.Name = "vendasAPrazoPagasToolStripMenuItem";
-            this.vendasAPrazoPagasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.vendasAPrazoPagasToolStripMenuItem.Text = "Vendas a prazo pagas";
+            this.vendasAPrazoPagasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.vendasAPrazoPagasToolStripMenuItem.Text = "Vendas pagas";
+            this.vendasAPrazoPagasToolStripMenuItem.Click += new System.EventHandler(this.vendasAPrazoPagasToolStripMenuItem_Click);
             // 
             // vendasRealizadasToolStripMenuItem
             // 
             this.vendasRealizadasToolStripMenuItem.Name = "vendasRealizadasToolStripMenuItem";
-            this.vendasRealizadasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.vendasRealizadasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.vendasRealizadasToolStripMenuItem.Text = "Vendas realizadas";
             // 
             // manutençãoToolStripMenuItem

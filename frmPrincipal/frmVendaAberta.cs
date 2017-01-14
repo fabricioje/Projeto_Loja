@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace frmPrincipal
 {
-    public partial class frmVendasAbertas : Form
+    public partial class frmVendaAberta : Form
     {
-        public frmVendasAbertas()
+        public frmVendaAberta()
         {
             InitializeComponent();
 
