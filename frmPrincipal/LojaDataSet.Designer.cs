@@ -52,6 +52,10 @@ namespace frmPrincipal {
         
         private Venda_Fechada_Com_PeriodoDataTable tableVenda_Fechada_Com_Periodo;
         
+        private Venda_Realizada_Sem_PeriodoDataTable tableVenda_Realizada_Sem_Periodo;
+        
+        private Venda_Realizada_Com_PeriodoDataTable tableVenda_Realizada_Com_Periodo;
+        
         private global::System.Data.DataRelation relationFK_Estoque_Produto;
         
         private global::System.Data.DataRelation relationFK_Item_Venda_Venda;
@@ -135,6 +139,12 @@ namespace frmPrincipal {
                 }
                 if ((ds.Tables["Venda_Fechada_Com_Periodo"] != null)) {
                     base.Tables.Add(new Venda_Fechada_Com_PeriodoDataTable(ds.Tables["Venda_Fechada_Com_Periodo"]));
+                }
+                if ((ds.Tables["Venda_Realizada_Sem_Periodo"] != null)) {
+                    base.Tables.Add(new Venda_Realizada_Sem_PeriodoDataTable(ds.Tables["Venda_Realizada_Sem_Periodo"]));
+                }
+                if ((ds.Tables["Venda_Realizada_Com_Periodo"] != null)) {
+                    base.Tables.Add(new Venda_Realizada_Com_PeriodoDataTable(ds.Tables["Venda_Realizada_Com_Periodo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -296,6 +306,26 @@ namespace frmPrincipal {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Venda_Realizada_Sem_PeriodoDataTable Venda_Realizada_Sem_Periodo {
+            get {
+                return this.tableVenda_Realizada_Sem_Periodo;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Venda_Realizada_Com_PeriodoDataTable Venda_Realizada_Com_Periodo {
+            get {
+                return this.tableVenda_Realizada_Com_Periodo;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -402,6 +432,12 @@ namespace frmPrincipal {
                 }
                 if ((ds.Tables["Venda_Fechada_Com_Periodo"] != null)) {
                     base.Tables.Add(new Venda_Fechada_Com_PeriodoDataTable(ds.Tables["Venda_Fechada_Com_Periodo"]));
+                }
+                if ((ds.Tables["Venda_Realizada_Sem_Periodo"] != null)) {
+                    base.Tables.Add(new Venda_Realizada_Sem_PeriodoDataTable(ds.Tables["Venda_Realizada_Sem_Periodo"]));
+                }
+                if ((ds.Tables["Venda_Realizada_Com_Periodo"] != null)) {
+                    base.Tables.Add(new Venda_Realizada_Com_PeriodoDataTable(ds.Tables["Venda_Realizada_Com_Periodo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -520,6 +556,18 @@ namespace frmPrincipal {
                     this.tableVenda_Fechada_Com_Periodo.InitVars();
                 }
             }
+            this.tableVenda_Realizada_Sem_Periodo = ((Venda_Realizada_Sem_PeriodoDataTable)(base.Tables["Venda_Realizada_Sem_Periodo"]));
+            if ((initTable == true)) {
+                if ((this.tableVenda_Realizada_Sem_Periodo != null)) {
+                    this.tableVenda_Realizada_Sem_Periodo.InitVars();
+                }
+            }
+            this.tableVenda_Realizada_Com_Periodo = ((Venda_Realizada_Com_PeriodoDataTable)(base.Tables["Venda_Realizada_Com_Periodo"]));
+            if ((initTable == true)) {
+                if ((this.tableVenda_Realizada_Com_Periodo != null)) {
+                    this.tableVenda_Realizada_Com_Periodo.InitVars();
+                }
+            }
             this.relationFK_Estoque_Produto = this.Relations["FK_Estoque_Produto"];
             this.relationFK_Item_Venda_Venda = this.Relations["FK_Item_Venda_Venda"];
             this.relationFK_Produto_Fornecedor = this.Relations["FK_Produto_Fornecedor"];
@@ -565,6 +613,10 @@ namespace frmPrincipal {
             base.Tables.Add(this.tableVenda_Fechada_Sem_Periodo);
             this.tableVenda_Fechada_Com_Periodo = new Venda_Fechada_Com_PeriodoDataTable();
             base.Tables.Add(this.tableVenda_Fechada_Com_Periodo);
+            this.tableVenda_Realizada_Sem_Periodo = new Venda_Realizada_Sem_PeriodoDataTable();
+            base.Tables.Add(this.tableVenda_Realizada_Sem_Periodo);
+            this.tableVenda_Realizada_Com_Periodo = new Venda_Realizada_Com_PeriodoDataTable();
+            base.Tables.Add(this.tableVenda_Realizada_Com_Periodo);
             this.relationFK_Estoque_Produto = new global::System.Data.DataRelation("FK_Estoque_Produto", new global::System.Data.DataColumn[] {
                         this.tableProduto.idProColumn}, new global::System.Data.DataColumn[] {
                         this.tableEstoque.idProColumn}, false);
@@ -681,6 +733,18 @@ namespace frmPrincipal {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeVenda_Realizada_Sem_Periodo() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeVenda_Realizada_Com_Periodo() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -775,6 +839,12 @@ namespace frmPrincipal {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void Venda_Fechada_Com_PeriodoRowChangeEventHandler(object sender, Venda_Fechada_Com_PeriodoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Venda_Realizada_Sem_PeriodoRowChangeEventHandler(object sender, Venda_Realizada_Sem_PeriodoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Venda_Realizada_Com_PeriodoRowChangeEventHandler(object sender, Venda_Realizada_Com_PeriodoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5874,6 +5944,748 @@ namespace frmPrincipal {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Venda_Realizada_Sem_PeriodoDataTable : global::System.Data.TypedTableBase<Venda_Realizada_Sem_PeriodoRow> {
+            
+            private global::System.Data.DataColumn columnidVen;
+            
+            private global::System.Data.DataColumn columnnomeCli;
+            
+            private global::System.Data.DataColumn columncpfCli;
+            
+            private global::System.Data.DataColumn columnnomePro;
+            
+            private global::System.Data.DataColumn columntamanhoPro;
+            
+            private global::System.Data.DataColumn columndataVenda;
+            
+            private global::System.Data.DataColumn columnquantidade;
+            
+            private global::System.Data.DataColumn columnvalorTotal;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Sem_PeriodoDataTable() {
+                this.TableName = "Venda_Realizada_Sem_Periodo";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Venda_Realizada_Sem_PeriodoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Venda_Realizada_Sem_PeriodoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idVenColumn {
+                get {
+                    return this.columnidVen;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nomeCliColumn {
+                get {
+                    return this.columnnomeCli;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cpfCliColumn {
+                get {
+                    return this.columncpfCli;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nomeProColumn {
+                get {
+                    return this.columnnomePro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tamanhoProColumn {
+                get {
+                    return this.columntamanhoPro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dataVendaColumn {
+                get {
+                    return this.columndataVenda;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn quantidadeColumn {
+                get {
+                    return this.columnquantidade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn valorTotalColumn {
+                get {
+                    return this.columnvalorTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Sem_PeriodoRow this[int index] {
+                get {
+                    return ((Venda_Realizada_Sem_PeriodoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Venda_Realizada_Sem_PeriodoRowChangeEventHandler Venda_Realizada_Sem_PeriodoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Venda_Realizada_Sem_PeriodoRowChangeEventHandler Venda_Realizada_Sem_PeriodoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Venda_Realizada_Sem_PeriodoRowChangeEventHandler Venda_Realizada_Sem_PeriodoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Venda_Realizada_Sem_PeriodoRowChangeEventHandler Venda_Realizada_Sem_PeriodoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddVenda_Realizada_Sem_PeriodoRow(Venda_Realizada_Sem_PeriodoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Sem_PeriodoRow AddVenda_Realizada_Sem_PeriodoRow(string nomeCli, string cpfCli, string nomePro, string tamanhoPro, System.DateTime dataVenda, int quantidade, decimal valorTotal) {
+                Venda_Realizada_Sem_PeriodoRow rowVenda_Realizada_Sem_PeriodoRow = ((Venda_Realizada_Sem_PeriodoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        nomeCli,
+                        cpfCli,
+                        nomePro,
+                        tamanhoPro,
+                        dataVenda,
+                        quantidade,
+                        valorTotal};
+                rowVenda_Realizada_Sem_PeriodoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVenda_Realizada_Sem_PeriodoRow);
+                return rowVenda_Realizada_Sem_PeriodoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Sem_PeriodoRow FindByidVen(int idVen) {
+                return ((Venda_Realizada_Sem_PeriodoRow)(this.Rows.Find(new object[] {
+                            idVen})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Venda_Realizada_Sem_PeriodoDataTable cln = ((Venda_Realizada_Sem_PeriodoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Venda_Realizada_Sem_PeriodoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnidVen = base.Columns["idVen"];
+                this.columnnomeCli = base.Columns["nomeCli"];
+                this.columncpfCli = base.Columns["cpfCli"];
+                this.columnnomePro = base.Columns["nomePro"];
+                this.columntamanhoPro = base.Columns["tamanhoPro"];
+                this.columndataVenda = base.Columns["dataVenda"];
+                this.columnquantidade = base.Columns["quantidade"];
+                this.columnvalorTotal = base.Columns["valorTotal"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnidVen = new global::System.Data.DataColumn("idVen", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidVen);
+                this.columnnomeCli = new global::System.Data.DataColumn("nomeCli", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnomeCli);
+                this.columncpfCli = new global::System.Data.DataColumn("cpfCli", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncpfCli);
+                this.columnnomePro = new global::System.Data.DataColumn("nomePro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnomePro);
+                this.columntamanhoPro = new global::System.Data.DataColumn("tamanhoPro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntamanhoPro);
+                this.columndataVenda = new global::System.Data.DataColumn("dataVenda", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndataVenda);
+                this.columnquantidade = new global::System.Data.DataColumn("quantidade", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantidade);
+                this.columnvalorTotal = new global::System.Data.DataColumn("valorTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvalorTotal);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidVen}, true));
+                this.columnidVen.AutoIncrement = true;
+                this.columnidVen.AutoIncrementSeed = -1;
+                this.columnidVen.AutoIncrementStep = -1;
+                this.columnidVen.AllowDBNull = false;
+                this.columnidVen.ReadOnly = true;
+                this.columnidVen.Unique = true;
+                this.columnnomeCli.AllowDBNull = false;
+                this.columnnomeCli.MaxLength = 50;
+                this.columncpfCli.AllowDBNull = false;
+                this.columncpfCli.MaxLength = 50;
+                this.columnnomePro.AllowDBNull = false;
+                this.columnnomePro.MaxLength = 50;
+                this.columntamanhoPro.AllowDBNull = false;
+                this.columntamanhoPro.MaxLength = 50;
+                this.columndataVenda.AllowDBNull = false;
+                this.columnquantidade.AllowDBNull = false;
+                this.columnvalorTotal.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Sem_PeriodoRow NewVenda_Realizada_Sem_PeriodoRow() {
+                return ((Venda_Realizada_Sem_PeriodoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Venda_Realizada_Sem_PeriodoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Venda_Realizada_Sem_PeriodoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Venda_Realizada_Sem_PeriodoRowChanged != null)) {
+                    this.Venda_Realizada_Sem_PeriodoRowChanged(this, new Venda_Realizada_Sem_PeriodoRowChangeEvent(((Venda_Realizada_Sem_PeriodoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Venda_Realizada_Sem_PeriodoRowChanging != null)) {
+                    this.Venda_Realizada_Sem_PeriodoRowChanging(this, new Venda_Realizada_Sem_PeriodoRowChangeEvent(((Venda_Realizada_Sem_PeriodoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Venda_Realizada_Sem_PeriodoRowDeleted != null)) {
+                    this.Venda_Realizada_Sem_PeriodoRowDeleted(this, new Venda_Realizada_Sem_PeriodoRowChangeEvent(((Venda_Realizada_Sem_PeriodoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Venda_Realizada_Sem_PeriodoRowDeleting != null)) {
+                    this.Venda_Realizada_Sem_PeriodoRowDeleting(this, new Venda_Realizada_Sem_PeriodoRowChangeEvent(((Venda_Realizada_Sem_PeriodoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveVenda_Realizada_Sem_PeriodoRow(Venda_Realizada_Sem_PeriodoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                LojaDataSet ds = new LojaDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Venda_Realizada_Sem_PeriodoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Venda_Realizada_Com_PeriodoDataTable : global::System.Data.TypedTableBase<Venda_Realizada_Com_PeriodoRow> {
+            
+            private global::System.Data.DataColumn columnidVen;
+            
+            private global::System.Data.DataColumn columnnomeCli;
+            
+            private global::System.Data.DataColumn columncpfCli;
+            
+            private global::System.Data.DataColumn columnnomePro;
+            
+            private global::System.Data.DataColumn columntamanhoPro;
+            
+            private global::System.Data.DataColumn columndataVenda;
+            
+            private global::System.Data.DataColumn columnquantidade;
+            
+            private global::System.Data.DataColumn columnvalorTotal;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Com_PeriodoDataTable() {
+                this.TableName = "Venda_Realizada_Com_Periodo";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Venda_Realizada_Com_PeriodoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Venda_Realizada_Com_PeriodoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idVenColumn {
+                get {
+                    return this.columnidVen;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nomeCliColumn {
+                get {
+                    return this.columnnomeCli;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cpfCliColumn {
+                get {
+                    return this.columncpfCli;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nomeProColumn {
+                get {
+                    return this.columnnomePro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tamanhoProColumn {
+                get {
+                    return this.columntamanhoPro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dataVendaColumn {
+                get {
+                    return this.columndataVenda;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn quantidadeColumn {
+                get {
+                    return this.columnquantidade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn valorTotalColumn {
+                get {
+                    return this.columnvalorTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Com_PeriodoRow this[int index] {
+                get {
+                    return ((Venda_Realizada_Com_PeriodoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Venda_Realizada_Com_PeriodoRowChangeEventHandler Venda_Realizada_Com_PeriodoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Venda_Realizada_Com_PeriodoRowChangeEventHandler Venda_Realizada_Com_PeriodoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Venda_Realizada_Com_PeriodoRowChangeEventHandler Venda_Realizada_Com_PeriodoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Venda_Realizada_Com_PeriodoRowChangeEventHandler Venda_Realizada_Com_PeriodoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddVenda_Realizada_Com_PeriodoRow(Venda_Realizada_Com_PeriodoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Com_PeriodoRow AddVenda_Realizada_Com_PeriodoRow(string nomeCli, string cpfCli, string nomePro, string tamanhoPro, System.DateTime dataVenda, int quantidade, decimal valorTotal) {
+                Venda_Realizada_Com_PeriodoRow rowVenda_Realizada_Com_PeriodoRow = ((Venda_Realizada_Com_PeriodoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        nomeCli,
+                        cpfCli,
+                        nomePro,
+                        tamanhoPro,
+                        dataVenda,
+                        quantidade,
+                        valorTotal};
+                rowVenda_Realizada_Com_PeriodoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVenda_Realizada_Com_PeriodoRow);
+                return rowVenda_Realizada_Com_PeriodoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Com_PeriodoRow FindByidVen(int idVen) {
+                return ((Venda_Realizada_Com_PeriodoRow)(this.Rows.Find(new object[] {
+                            idVen})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Venda_Realizada_Com_PeriodoDataTable cln = ((Venda_Realizada_Com_PeriodoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Venda_Realizada_Com_PeriodoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnidVen = base.Columns["idVen"];
+                this.columnnomeCli = base.Columns["nomeCli"];
+                this.columncpfCli = base.Columns["cpfCli"];
+                this.columnnomePro = base.Columns["nomePro"];
+                this.columntamanhoPro = base.Columns["tamanhoPro"];
+                this.columndataVenda = base.Columns["dataVenda"];
+                this.columnquantidade = base.Columns["quantidade"];
+                this.columnvalorTotal = base.Columns["valorTotal"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnidVen = new global::System.Data.DataColumn("idVen", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidVen);
+                this.columnnomeCli = new global::System.Data.DataColumn("nomeCli", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnomeCli);
+                this.columncpfCli = new global::System.Data.DataColumn("cpfCli", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncpfCli);
+                this.columnnomePro = new global::System.Data.DataColumn("nomePro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnomePro);
+                this.columntamanhoPro = new global::System.Data.DataColumn("tamanhoPro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntamanhoPro);
+                this.columndataVenda = new global::System.Data.DataColumn("dataVenda", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndataVenda);
+                this.columnquantidade = new global::System.Data.DataColumn("quantidade", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantidade);
+                this.columnvalorTotal = new global::System.Data.DataColumn("valorTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvalorTotal);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidVen}, true));
+                this.columnidVen.AutoIncrement = true;
+                this.columnidVen.AutoIncrementSeed = -1;
+                this.columnidVen.AutoIncrementStep = -1;
+                this.columnidVen.AllowDBNull = false;
+                this.columnidVen.ReadOnly = true;
+                this.columnidVen.Unique = true;
+                this.columnnomeCli.AllowDBNull = false;
+                this.columnnomeCli.MaxLength = 50;
+                this.columncpfCli.AllowDBNull = false;
+                this.columncpfCli.MaxLength = 50;
+                this.columnnomePro.AllowDBNull = false;
+                this.columnnomePro.MaxLength = 50;
+                this.columntamanhoPro.AllowDBNull = false;
+                this.columntamanhoPro.MaxLength = 50;
+                this.columndataVenda.AllowDBNull = false;
+                this.columnquantidade.AllowDBNull = false;
+                this.columnvalorTotal.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Com_PeriodoRow NewVenda_Realizada_Com_PeriodoRow() {
+                return ((Venda_Realizada_Com_PeriodoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Venda_Realizada_Com_PeriodoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Venda_Realizada_Com_PeriodoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Venda_Realizada_Com_PeriodoRowChanged != null)) {
+                    this.Venda_Realizada_Com_PeriodoRowChanged(this, new Venda_Realizada_Com_PeriodoRowChangeEvent(((Venda_Realizada_Com_PeriodoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Venda_Realizada_Com_PeriodoRowChanging != null)) {
+                    this.Venda_Realizada_Com_PeriodoRowChanging(this, new Venda_Realizada_Com_PeriodoRowChangeEvent(((Venda_Realizada_Com_PeriodoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Venda_Realizada_Com_PeriodoRowDeleted != null)) {
+                    this.Venda_Realizada_Com_PeriodoRowDeleted(this, new Venda_Realizada_Com_PeriodoRowChangeEvent(((Venda_Realizada_Com_PeriodoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Venda_Realizada_Com_PeriodoRowDeleting != null)) {
+                    this.Venda_Realizada_Com_PeriodoRowDeleting(this, new Venda_Realizada_Com_PeriodoRowChangeEvent(((Venda_Realizada_Com_PeriodoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveVenda_Realizada_Com_PeriodoRow(Venda_Realizada_Com_PeriodoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                LojaDataSet ds = new LojaDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Venda_Realizada_Com_PeriodoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class ClienteRow : global::System.Data.DataRow {
@@ -7432,6 +8244,212 @@ namespace frmPrincipal {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Venda_Realizada_Sem_PeriodoRow : global::System.Data.DataRow {
+            
+            private Venda_Realizada_Sem_PeriodoDataTable tableVenda_Realizada_Sem_Periodo;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Venda_Realizada_Sem_PeriodoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVenda_Realizada_Sem_Periodo = ((Venda_Realizada_Sem_PeriodoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int idVen {
+                get {
+                    return ((int)(this[this.tableVenda_Realizada_Sem_Periodo.idVenColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Sem_Periodo.idVenColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nomeCli {
+                get {
+                    return ((string)(this[this.tableVenda_Realizada_Sem_Periodo.nomeCliColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Sem_Periodo.nomeCliColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cpfCli {
+                get {
+                    return ((string)(this[this.tableVenda_Realizada_Sem_Periodo.cpfCliColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Sem_Periodo.cpfCliColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nomePro {
+                get {
+                    return ((string)(this[this.tableVenda_Realizada_Sem_Periodo.nomeProColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Sem_Periodo.nomeProColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tamanhoPro {
+                get {
+                    return ((string)(this[this.tableVenda_Realizada_Sem_Periodo.tamanhoProColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Sem_Periodo.tamanhoProColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime dataVenda {
+                get {
+                    return ((global::System.DateTime)(this[this.tableVenda_Realizada_Sem_Periodo.dataVendaColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Sem_Periodo.dataVendaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int quantidade {
+                get {
+                    return ((int)(this[this.tableVenda_Realizada_Sem_Periodo.quantidadeColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Sem_Periodo.quantidadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal valorTotal {
+                get {
+                    return ((decimal)(this[this.tableVenda_Realizada_Sem_Periodo.valorTotalColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Sem_Periodo.valorTotalColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Venda_Realizada_Com_PeriodoRow : global::System.Data.DataRow {
+            
+            private Venda_Realizada_Com_PeriodoDataTable tableVenda_Realizada_Com_Periodo;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Venda_Realizada_Com_PeriodoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVenda_Realizada_Com_Periodo = ((Venda_Realizada_Com_PeriodoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int idVen {
+                get {
+                    return ((int)(this[this.tableVenda_Realizada_Com_Periodo.idVenColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Com_Periodo.idVenColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nomeCli {
+                get {
+                    return ((string)(this[this.tableVenda_Realizada_Com_Periodo.nomeCliColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Com_Periodo.nomeCliColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cpfCli {
+                get {
+                    return ((string)(this[this.tableVenda_Realizada_Com_Periodo.cpfCliColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Com_Periodo.cpfCliColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nomePro {
+                get {
+                    return ((string)(this[this.tableVenda_Realizada_Com_Periodo.nomeProColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Com_Periodo.nomeProColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tamanhoPro {
+                get {
+                    return ((string)(this[this.tableVenda_Realizada_Com_Periodo.tamanhoProColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Com_Periodo.tamanhoProColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime dataVenda {
+                get {
+                    return ((global::System.DateTime)(this[this.tableVenda_Realizada_Com_Periodo.dataVendaColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Com_Periodo.dataVendaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int quantidade {
+                get {
+                    return ((int)(this[this.tableVenda_Realizada_Com_Periodo.quantidadeColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Com_Periodo.quantidadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal valorTotal {
+                get {
+                    return ((decimal)(this[this.tableVenda_Realizada_Com_Periodo.valorTotalColumn]));
+                }
+                set {
+                    this[this.tableVenda_Realizada_Com_Periodo.valorTotalColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -7893,6 +8911,74 @@ namespace frmPrincipal {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Venda_Fechada_Com_PeriodoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Venda_Realizada_Sem_PeriodoRowChangeEvent : global::System.EventArgs {
+            
+            private Venda_Realizada_Sem_PeriodoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Sem_PeriodoRowChangeEvent(Venda_Realizada_Sem_PeriodoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Sem_PeriodoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Venda_Realizada_Com_PeriodoRowChangeEvent : global::System.EventArgs {
+            
+            private Venda_Realizada_Com_PeriodoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Com_PeriodoRowChangeEvent(Venda_Realizada_Com_PeriodoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Venda_Realizada_Com_PeriodoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -12511,6 +13597,389 @@ WHERE        (v.dataVencimento BETWEEN @parameter AND @parameter2) AND (v.situac
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             LojaDataSet.Venda_Fechada_Com_PeriodoDataTable dataTable = new LojaDataSet.Venda_Fechada_Com_PeriodoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Venda_Realizada_Sem_PeriodoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Venda_Realizada_Sem_PeriodoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Venda_Realizada_Sem_Periodo";
+            tableMapping.ColumnMappings.Add("idVen", "idVen");
+            tableMapping.ColumnMappings.Add("nomeCli", "nomeCli");
+            tableMapping.ColumnMappings.Add("cpfCli", "cpfCli");
+            tableMapping.ColumnMappings.Add("nomePro", "nomePro");
+            tableMapping.ColumnMappings.Add("tamanhoPro", "tamanhoPro");
+            tableMapping.ColumnMappings.Add("dataVenda", "dataVenda");
+            tableMapping.ColumnMappings.Add("quantidade", "quantidade");
+            tableMapping.ColumnMappings.Add("valorTotal", "valorTotal");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::frmPrincipal.Properties.Settings.Default.LojaConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        v.idVen, c.nomeCli, c.cpfCli, p.nomePro, p.tamanhoPro, v.dataVenda, i.quantidade, v.valorTotal
+FROM            Venda AS v INNER JOIN
+                         Item_Venda AS i ON v.idVen = i.idItemVen INNER JOIN
+                         Cliente AS c ON c.idCli = v.idCli INNER JOIN
+                         Produto AS p ON p.idPro = v.idPro";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(LojaDataSet.Venda_Realizada_Sem_PeriodoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual LojaDataSet.Venda_Realizada_Sem_PeriodoDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            LojaDataSet.Venda_Realizada_Sem_PeriodoDataTable dataTable = new LojaDataSet.Venda_Realizada_Sem_PeriodoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Venda_Realizada_Com_PeriodoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Venda_Realizada_Com_PeriodoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Venda_Realizada_Com_Periodo";
+            tableMapping.ColumnMappings.Add("idVen", "idVen");
+            tableMapping.ColumnMappings.Add("nomeCli", "nomeCli");
+            tableMapping.ColumnMappings.Add("cpfCli", "cpfCli");
+            tableMapping.ColumnMappings.Add("nomePro", "nomePro");
+            tableMapping.ColumnMappings.Add("tamanhoPro", "tamanhoPro");
+            tableMapping.ColumnMappings.Add("dataVenda", "dataVenda");
+            tableMapping.ColumnMappings.Add("quantidade", "quantidade");
+            tableMapping.ColumnMappings.Add("valorTotal", "valorTotal");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::frmPrincipal.Properties.Settings.Default.LojaConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        v.idVen, c.nomeCli, c.cpfCli, p.nomePro, p.tamanhoPro, v.dataVenda, i.quantidade, v.valorTotal
+FROM            Venda AS v INNER JOIN
+                         Item_Venda AS i ON v.idVen = i.idItemVen INNER JOIN
+                         Cliente AS c ON c.idCli = v.idCli INNER JOIN
+                         Produto AS p ON p.idPro = v.idPro
+WHERE        (v.dataVencimento BETWEEN @parameter AND @parameter2)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@parameter", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "dataVencimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@parameter2", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "dataVencimento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(LojaDataSet.Venda_Realizada_Com_PeriodoDataTable dataTable, global::System.Nullable<global::System.DateTime> parameter, global::System.Nullable<global::System.DateTime> parameter2) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((parameter.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(parameter.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((parameter2.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(parameter2.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual LojaDataSet.Venda_Realizada_Com_PeriodoDataTable GetData(global::System.Nullable<global::System.DateTime> parameter, global::System.Nullable<global::System.DateTime> parameter2) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((parameter.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(parameter.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((parameter2.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(parameter2.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            LojaDataSet.Venda_Realizada_Com_PeriodoDataTable dataTable = new LojaDataSet.Venda_Realizada_Com_PeriodoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

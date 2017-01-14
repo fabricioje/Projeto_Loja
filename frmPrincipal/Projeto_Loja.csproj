@@ -241,6 +241,24 @@
     <Compile Include="frmVendaProduto.Designer.cs">
       <DependentUpon>frmVendaProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVendaRealizada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaRealizada.Designer.cs">
+      <DependentUpon>frmVendaRealizada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendaRealizadaComPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaRealizadaComPeriodo.Designer.cs">
+      <DependentUpon>frmVendaRealizadaComPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendaRealizadaSemPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendaRealizadaSemPeriodo.Designer.cs">
+      <DependentUpon>frmVendaRealizadaSemPeriodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVendaRecebimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +362,15 @@
     <EmbeddedResource Include="frmVendaProduto.resx">
       <DependentUpon>frmVendaProduto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaRealizada.resx">
+      <DependentUpon>frmVendaRealizada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaRealizadaComPeriodo.resx">
+      <DependentUpon>frmVendaRealizadaComPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendaRealizadaSemPeriodo.resx">
+      <DependentUpon>frmVendaRealizadaSemPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVendaRecebimento.resx">
       <DependentUpon>frmVendaRecebimento.cs</DependentUpon>
     </EmbeddedResource>
@@ -365,6 +392,8 @@
     <EmbeddedResource Include="repVendaAbertaComPeriodo.rdlc" />
     <EmbeddedResource Include="repVendaFechadaComPeriodo.rdlc" />
     <EmbeddedResource Include="repVendaFechadaSemPeriodo.rdlc" />
+    <EmbeddedResource Include="repVendaRealizadaComPeriodo.rdlc" />
+    <EmbeddedResource Include="repVendaRealizadaSemPeriodo.rdlc" />
     <EmbeddedResource Include="repVendasAbertas.rdlc" />
     <None Include="LojaDataSet.xsc">
       <DependentUpon>LojaDataSet.xsd</DependentUpon>

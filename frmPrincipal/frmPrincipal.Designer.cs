@@ -258,6 +258,7 @@
             this.vendasRealizadasToolStripMenuItem.Name = "vendasRealizadasToolStripMenuItem";
             this.vendasRealizadasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.vendasRealizadasToolStripMenuItem.Text = "Vendas realizadas";
+            this.vendasRealizadasToolStripMenuItem.Click += new System.EventHandler(this.vendasRealizadasToolStripMenuItem_Click);
             // 
             // manutençãoToolStripMenuItem
             // 
