@@ -143,5 +143,19 @@ namespace frmPrincipal
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void configuraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConfiguracaoBackup f = new frmConfiguracaoBackup();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void backupDoBancoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBackupBancoDeDados f = new frmBackupBancoDeDados();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }

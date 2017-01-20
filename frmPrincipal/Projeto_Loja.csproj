@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Fabricio\Desktop\programa\</PublishUrl>
+    <PublishUrl>C:\Users\Fabricio\Desktop\execultavel\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -79,6 +79,19 @@
   <ItemGroup>
     <Compile Include="Autenticacao.cs" />
     <Compile Include="Conexao.cs" />
+    <Compile Include="DadosBanco.cs" />
+    <Compile Include="frmBackupBancoDeDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackupBancoDeDados.Designer.cs">
+      <DependentUpon>frmBackupBancoDeDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracaoBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracaoBackup.Designer.cs">
+      <DependentUpon>frmConfiguracaoBackup.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmClienteAlterarFinal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,8 +292,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelatorioController.cs" />
+    <Compile Include="SQLServerBackup.cs" />
     <Compile Include="Verificacao.cs" />
     <Compile Include="VerificaParcela.cs" />
+    <EmbeddedResource Include="frmBackupBancoDeDados.resx">
+      <DependentUpon>frmBackupBancoDeDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguracaoBackup.resx">
+      <DependentUpon>frmConfiguracaoBackup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmClienteAlterarFinal.resx">
       <DependentUpon>frmClienteAlterarFinal.cs</DependentUpon>
     </EmbeddedResource>
@@ -418,7 +438,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Alterar.png" />

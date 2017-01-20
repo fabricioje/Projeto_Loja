@@ -54,6 +54,8 @@
             this.vendasAPrazoPagasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasRealizadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupDoBancoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsuarioConectado = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -262,9 +264,26 @@
             // 
             // manutençãoToolStripMenuItem
             // 
+            this.manutençãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configuraToolStripMenuItem,
+            this.backupDoBancoDeDadosToolStripMenuItem});
             this.manutençãoToolStripMenuItem.Name = "manutençãoToolStripMenuItem";
             this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.manutençãoToolStripMenuItem.Text = "Manutenção";
+            // 
+            // configuraToolStripMenuItem
+            // 
+            this.configuraToolStripMenuItem.Name = "configuraToolStripMenuItem";
+            this.configuraToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.configuraToolStripMenuItem.Text = "Configuração do Banco de Dados";
+            this.configuraToolStripMenuItem.Click += new System.EventHandler(this.configuraToolStripMenuItem_Click);
+            // 
+            // backupDoBancoDeDadosToolStripMenuItem
+            // 
+            this.backupDoBancoDeDadosToolStripMenuItem.Name = "backupDoBancoDeDadosToolStripMenuItem";
+            this.backupDoBancoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.backupDoBancoDeDadosToolStripMenuItem.Text = "Backup do Banco de Dados";
+            this.backupDoBancoDeDadosToolStripMenuItem.Click += new System.EventHandler(this.backupDoBancoDeDadosToolStripMenuItem_Click);
             // 
             // lblUsuarioConectado
             // 
@@ -326,6 +345,8 @@
         private System.Windows.Forms.ToolStripMenuItem vendasEmAbertoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendasAPrazoPagasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendasRealizadasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backupDoBancoDeDadosToolStripMenuItem;
     }
 }
 

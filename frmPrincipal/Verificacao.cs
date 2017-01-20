@@ -42,5 +42,39 @@ namespace frmPrincipal
             }
             return aux;
         }
+
+        public int verificaIdBanco(string verificaLogin)
+        {
+            con = banco.abrir_conexao();
+
+            int total;
+            string query = "SELECT COUNT(login) FROM Usuario WHERE login=@login1";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@login1", verificaLogin);
+
+            //Usa o escalar porque ele retorna o valor da coluna do select, é colocado no object para receber um valor nulo.
+            object o = cmd.ExecuteScalar();
+
+            total = Convert.ToInt32(o);
+
+            /**
+            if (o != null)
+            {
+                int total = Convert.ToInt32(o);
+                if (total > 0)
+                {
+
+                    cmd.Parameters.Clear();
+                    aux = false;
+                }
+                else
+                {
+                    aux = true;
+                }
+            }
+    **/
+            return total;
+        }
     }
 }

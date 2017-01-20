@@ -15,6 +15,9 @@ namespace frmPrincipal
     {
         SqlConnection con;
         Conexao banco = new Conexao();
+
+        string loginOriginal;
+
         public frmUsuarioAlterarFinal()
         {
             InitializeComponent();
@@ -23,6 +26,8 @@ namespace frmPrincipal
 
         public void recebeDados(int recebeID, string recebeNome, string recebeData, string recebeCidade, string recebeRua, int recebeNumero, string recebeBairro, string recebeTelefone, string recebeCelular, string recebeLogin, string recebeSenha, string recebePermissao)
         {
+            loginOriginal = recebeLogin;
+
             txtID.Text = Convert.ToString(recebeID);
             txtNome.Text = recebeNome;
             dtDataNasc.Text = recebeData;
@@ -55,7 +60,7 @@ namespace frmPrincipal
             Verificacao v = new Verificacao();
 
             //verifica se já existe esse login no banco
-            if (v.verificaBanco(login))
+            if (loginOriginal.Equals(txtLogin.Text))
             {
                 try
                 {
@@ -70,11 +75,29 @@ namespace frmPrincipal
                 {
                     MessageBox.Show("Erro na execução do programa. \n Erro: " + ex.Message);
                 }
+            }else if(v.verificaIdBanco(login) <= 0){
+                try
+                {
+                    string atualizar = @"UPDATE Usuario SET nomeUsu = '" + nome + "', nascimentoUsu = '" + data + "', cidadeUsu = '" + cidade + "', ruaUsu = '" + rua + "', numeroUsu = '" + numero + "', bairroUsu = '" + bairro + "', telUsu = '" + telefone + "', celUsu = '" + celular + "', login = '" + login + "', senha = '" + senha + "', tipoPermissao = '" + permissao + "' WHERE idUsuario = '" + id + "' ";
+                    SqlCommand cmd = new SqlCommand(atualizar, con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    MessageBox.Show("Atualização realizada com sucesso!!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro na execução do programa. \n Erro: " + ex.Message);
+                }
+            this.Close();
+
             }
             else
             {
                 MessageBox.Show("Esse nome de usuário já esta sendo usado, escolha um diferente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            
             
         }
 
